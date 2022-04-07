@@ -10,8 +10,8 @@
 #import <WebKit/WebKit.h>
 #import "LCMenuIconView.h"
 #import "ISToggleSwitch.h"
-#import "Sentry/Sentry.h"
-#import "Countly.h"
+//#import "Sentry/Sentry.h"
+//#import "Countly.h"
 #import <Keys/CaffeineKeys.h>
 
 // Workaround for bug in 64-bit SDK

@@ -11,7 +11,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		B1B1BED617FC46245DFAC800 /* libPods-Caffeine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B59DD06893B4935B70BD273F /* libPods-Caffeine.a */; };
+		BCD1B84FA718636783873A92 /* Pods_Caffeine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852565D87B2FD1547589EFF6 /* Pods_Caffeine.framework */; };
 		E26E9A8C0DF6E32500560CC1 /* Caffeine.sdef in Resources */ = {isa = PBXBuildFile; fileRef = E26E99B10DF6D65C00560CC1 /* Caffeine.sdef */; };
 		E26E9A910DF6E33200560CC1 /* AppCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E99CC0DF6D83B00560CC1 /* AppCategory.m */; };
 		E2C558291050A00B0087103D /* LCMenuIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C558281050A00B0087103D /* LCMenuIconView.m */; };
@@ -46,10 +46,10 @@
 		3DEBDFA327FEB529004B1187 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DEBDFA427FEB529004B1187 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3DEBDFA627FEB530004B1187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		852565D87B2FD1547589EFF6 /* Pods_Caffeine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Caffeine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Caffeine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caffeine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BADA4F8D5A0AFE68767B5B /* Pods-Caffeine.app store release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caffeine.app store release.xcconfig"; path = "Target Support Files/Pods-Caffeine/Pods-Caffeine.app store release.xcconfig"; sourceTree = "<group>"; };
-		B59DD06893B4935B70BD273F /* libPods-Caffeine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Caffeine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBC0BB38CB57A59AAC09A34 /* Pods-Caffeine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caffeine.debug.xcconfig"; path = "Target Support Files/Pods-Caffeine/Pods-Caffeine.debug.xcconfig"; sourceTree = "<group>"; };
 		E26E99B10DF6D65C00560CC1 /* Caffeine.sdef */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; path = Caffeine.sdef; sourceTree = "<group>"; };
 		E26E99CB0DF6D83B00560CC1 /* AppCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCategory.h; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 				F79DB70821ACBF7F00CA9977 /* ApplicationServices.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				E2C559DB1050B7ED0087103D /* CoreServices.framework in Frameworks */,
-				B1B1BED617FC46245DFAC800 /* libPods-Caffeine.a in Frameworks */,
+				BCD1B84FA718636783873A92 /* Pods_Caffeine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +199,7 @@
 				F79DB70721ACBF7F00CA9977 /* ApplicationServices.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
-				B59DD06893B4935B70BD273F /* libPods-Caffeine.a */,
+				852565D87B2FD1547589EFF6 /* Pods_Caffeine.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -215,6 +215,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				C66FED497DDD3B875DBDDDF5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +295,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		C66FED497DDD3B875DBDDDF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caffeine/Pods-Caffeine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Caffeine/Pods-Caffeine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EC2EDFE865F5B312C99D7CAD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

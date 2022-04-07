@@ -10,6 +10,7 @@
 #import <CoreServices/CoreServices.h>
 #import <ApplicationServices/ApplicationServices.h>
 
+
 @implementation AppDelegate
 
 # pragma mark - Initialization
@@ -214,24 +215,24 @@
 
 # pragma mark - Application Lifecycle Events
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"SendProblemReports"]) {
+//- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+//    if([[NSUserDefaults standardUserDefaults] boolForKey:@"SendProblemReports"]) {
         // Sentry - Used for collecting crash reports & error statistics
-        NSError *error = nil;
-        SentryClient *client = [[SentryClient alloc] initWithDsn:config.sentryDSN didFailWithError:&error];
-        SentryClient.sharedClient = client;
-        [SentryClient.sharedClient startCrashHandlerWithError:&error];
-        if (nil != error) {
-            NSLog(@"%@", error);
-        }
+        //NSError *error = nil;
+        //SentryClient *client = [[SentryClient alloc] initWithDsn:config.sentryDSN didFailWithError:&error];
+        //SentryClient.sharedClient = client;
+        //[SentryClient.sharedClient startCrashHandlerWithError:&error];
+        //if (nil != error) {
+        //    NSLog(@"%@", error);
+        //}
         
         // Countly - Used for gathering anonymous metrics, such as OS version & device model
-        CountlyConfig* countly = CountlyConfig.new;
-        countly.appKey = config.countlyAppKey;
-        countly.host = config.countlyHost;
-        [Countly.sharedInstance startWithConfig:countly];
-    }
-}
+        //CountlyConfig* countly = CountlyConfig.new;
+        //countly.appKey = config.countlyAppKey;
+        //countly.host = config.countlyHost;
+        //[Countly.sharedInstance startWithConfig:countly];
+//    }
+//}
 
 - (void)applicationDidBecomeActive:(NSNotification *)aNotification {
     [self checkForAccessibilityPermission];

@@ -1,17 +1,18 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :osx, '10.10'
+platform :macos, '11.0'
+use_frameworks!
 
 target 'Caffeine' do
-    pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '4.4.3'
-    pod 'Countly', '~> 19.08'
+    #pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => 'master'
+    #pod 'Countly', '~> 20.11.1'
 end
 
 plugin 'cocoapods-keys', {
   :project => "Caffeine",
   :target => "Caffeine",
   :keys => [
-    "SentryDSN",
-    "CountlyAppKey",
-    "CountlyHost"
+    #"SentryDSN",
+    #"CountlyAppKey",
+    #"CountlyHost"
   ]
 }
