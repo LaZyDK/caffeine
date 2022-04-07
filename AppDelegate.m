@@ -215,25 +215,6 @@
 
 # pragma mark - Application Lifecycle Events
 
-//- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-//    if([[NSUserDefaults standardUserDefaults] boolForKey:@"SendProblemReports"]) {
-        // Sentry - Used for collecting crash reports & error statistics
-        //NSError *error = nil;
-        //SentryClient *client = [[SentryClient alloc] initWithDsn:config.sentryDSN didFailWithError:&error];
-        //SentryClient.sharedClient = client;
-        //[SentryClient.sharedClient startCrashHandlerWithError:&error];
-        //if (nil != error) {
-        //    NSLog(@"%@", error);
-        //}
-        
-        // Countly - Used for gathering anonymous metrics, such as OS version & device model
-        //CountlyConfig* countly = CountlyConfig.new;
-        //countly.appKey = config.countlyAppKey;
-        //countly.host = config.countlyHost;
-        //[Countly.sharedInstance startWithConfig:countly];
-//    }
-//}
-
 - (void)applicationDidBecomeActive:(NSNotification *)aNotification {
     [self checkForAccessibilityPermission];
 }
@@ -285,55 +266,11 @@
 
 # pragma mark - Help & Feedback Window Utility Methods
 
--(IBAction)launchHelpCenter:(id)sender {
-    [helpCenterWindow center];
-    [helpCenterWindow setIsVisible:YES];
-    [helpCenterWindow makeKeyAndOrderFront:nil];
-}
+//-(IBAction)launchSupportAccessibility:(id)sender {
+//    [[NSWorkspace sharedWorkspace] openURL:
+//     [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", webBaseURL, @"/support/permissions"]]];
+//}
 
--(IBAction)launchSupport:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:
-     [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", webBaseURL, @"/support"]]];
-}
-
--(IBAction)launchSupportAccessibility:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:
-     [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", webBaseURL, @"/support/permissions"]]];
-}
-
--(IBAction)launchFeedback:(id)sender {
-    NSURL *nsurl=[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", webBaseURL, @"/feedback"]];
-    if (NSClassFromString(@"WKWebView")) {
-        NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
-        WKWebView *feedbackWebView = [[WKWebView alloc] initWithFrame:[[feedbackWindow contentView] frame]];
-        [feedbackWebView loadRequest:nsrequest];
-        [[feedbackWindow contentView] addSubview:feedbackWebView];
-        [feedbackWindow center];
-        [feedbackWindow setIsVisible:YES];
-        [feedbackWindow makeKeyAndOrderFront:nil];
-    }else{
-        [[NSWorkspace sharedWorkspace] openURL:nsurl];
-    }
-}
-
--(IBAction)launchDonate:(id)sender {
-    NSURL *nsurl=[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", webBaseURL, @"/donate"]];
-    if (NSClassFromString(@"WKWebView")) {
-        NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
-        WKWebView *donateWebView = [[WKWebView alloc] initWithFrame:[[donateWindow contentView] frame]];
-        [donateWebView loadRequest:nsrequest];
-        [[donateWindow contentView] addSubview:donateWebView];
-        [donateWindow center];
-        [donateWindow setIsVisible:YES];
-        [donateWindow makeKeyAndOrderFront:nil];
-    }else{
-        [[NSWorkspace sharedWorkspace] openURL:nsurl];
-    }
-}
-
--(IBAction)showProblemReportInfoPopoverButton:(id)sender {
-    [problemReportInfoPopover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
-}
 
 # pragma mark - Maintenance & Memory Management
 

@@ -335,81 +335,17 @@ DQ
                             <action selector="launchSystemPreferences:" target="209" id="YgA-o6-tDd"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZTN-lv-z7J">
-                        <rect key="frame" x="490" y="17" width="25" height="25"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4EQ-xW-vay">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="launchSupportAccessibility:" target="209" id="ngb-hG-tit"/>
-                        </connections>
-                    </button>
                 </subviews>
             </view>
             <point key="canvasLocation" x="-529.5" y="422"/>
         </window>
-        <viewController id="P8h-ow-mJo" userLabel="Popover View Controller">
-            <connections>
-                <outlet property="view" destination="ndJ-lE-Rj8" id="6xn-oY-Ez2"/>
-            </connections>
-        </viewController>
+        <viewController id="P8h-ow-mJo" userLabel="Popover View Controller"/>
         <popover behavior="t" id="T9U-rq-DHk">
             <connections>
                 <outlet property="contentViewController" destination="P8h-ow-mJo" id="3g8-D7-avB"/>
                 <outlet property="delegate" destination="P8h-ow-mJo" id="AZn-6Y-ZqN"/>
             </connections>
         </popover>
-        <customView id="ndJ-lE-Rj8" userLabel="Problem Report Information">
-            <rect key="frame" x="0.0" y="0.0" width="607" height="204"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DhO-JF-CmJ">
-                    <rect key="frame" x="18" y="149" width="571" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="CXU-HV-09b">
-                        <font key="font" metaFont="smallSystem"/>
-                        <string key="title">We respect your privacy. In order to provide support for Caffeine and to be able to address problems in a timely manner, we may gather the following information:</string>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KK8-R5-pQK">
-                    <rect key="frame" x="18" y="45" width="571" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="Dbu-iV-CXb">
-                        <font key="font" metaFont="smallSystem"/>
-                        <string key="title">These items are collected to assist in identifying problems with certain combinations of hardware, bugs in new macOS versions, and so on. We do not collect any personal information, and extra precautions are taken to further anonomize this data as it is received. </string>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-pt-Bky">
-                    <rect key="frame" x="18" y="20" width="571" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="However, if you are not comfortable with this functionality for any reason, you may disable it here." id="wEN-1j-3PM">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ynx-Jv-kar">
-                    <rect key="frame" x="18" y="95" width="571" height="52"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" allowsEditingTextAttributes="YES" id="jg3-jh-YfD">
-                        <font key="font" metaFont="system" size="10"/>
-                        <string key="title">        •  Crash logs, error details and problem reports
-        •  Operating system version information (e.g. macOS Mojave 10.14.6)
-        •  Hardware make and model (e.g. type of Mac and screen size)
-        •  General information about the conditions under which Caffeine is running </string>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-            </subviews>
-            <point key="canvasLocation" x="1351" y="478"/>
-        </customView>
     </objects>
     <resources>
         <image name="AccessibilityPermission" width="376" height="300"/>

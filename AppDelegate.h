@@ -10,8 +10,6 @@
 #import <WebKit/WebKit.h>
 #import "LCMenuIconView.h"
 #import "ISToggleSwitch.h"
-//#import "Sentry/Sentry.h"
-//#import "Countly.h"
 #import <Keys/CaffeineKeys.h>
 
 // Workaround for bug in 64-bit SDK
@@ -42,9 +40,6 @@ extern OSErr UpdateSystemActivity(UInt8 activity);
 	IBOutlet NSMenuItem *infoSeparatorItem;
     
     IBOutlet NSWindow *accessibilityPermissionWindow;
-    IBOutlet NSWindow *helpCenterWindow;
-    IBOutlet NSWindow *feedbackWindow;
-    IBOutlet NSWindow *donateWindow;
     
     IBOutlet ISToggleSwitch *problemReportSwitch;
     IBOutlet NSPopover *problemReportInfoPopover;
@@ -68,12 +63,6 @@ extern OSErr UpdateSystemActivity(UInt8 activity);
 - (void)userSessionDidBecomeActive:(NSNotification *)note;
 
 -(IBAction)showAccessibilityPrompt:(id)sender;
--(IBAction)launchSupportAccessibility:(id)sender;
--(IBAction)launchHelpCenter:(id)sender;
--(IBAction)launchSupport:(id)sender;
--(IBAction)launchFeedback:(id)sender;
--(IBAction)launchDonate:(id)sender;
 -(IBAction)launchSystemPreferences:(id)sender;
--(IBAction)showProblemReportInfoPopoverButton:(id)sender;
 
 @end

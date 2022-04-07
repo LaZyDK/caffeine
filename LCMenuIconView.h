@@ -15,6 +15,7 @@
 	
 	IBOutlet NSMenu *menu;
 	NSStatusItem *statusItem;
+    //TODO: NSMenuItem *statusItem;
 	
 	NSImage *activeImage;
 	NSImage *inactiveImage;
